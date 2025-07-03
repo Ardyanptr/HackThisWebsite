@@ -13,6 +13,7 @@
     "@tsparticles/all": "^3.8.1",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
+    "@vercel/speed-insights": "^1.2.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.19.1",
     "gsap": "^3.13.0",

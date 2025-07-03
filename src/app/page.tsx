@@ -10,17 +10,14 @@ import { useState } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import ClickSpark from './ClickSpark/ClickSpark'
 import Aurora from './Aurora/Aurora'
 import ShinyText from "./ShinyText/ShinyText";
 import SplitText from "./SplitText/SplitText";
 import BlurText from "./BlurText/BlurText";
 import FadeContent from "./FadeContent/FadeContent";
-import ScrollFloat from "./ScrollFloat/ScrollFloat";
 import AnimatedContent from "./AnimatedContent/AnimatedContent";
 
 import './globals.css'
-import { none } from "@tsparticles/engine";
 
 export default function Home() {
   useEffect(() => {
