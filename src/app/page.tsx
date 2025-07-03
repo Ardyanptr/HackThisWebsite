@@ -16,7 +16,6 @@ import ShinyText from "./ShinyText/ShinyText";
 import SplitText from "./SplitText/SplitText";
 import BlurText from "./BlurText/BlurText";
 import FadeContent from "./FadeContent/FadeContent";
-import RotatingText from "./RotatingText/RotatingText";
 import ScrollFloat from "./ScrollFloat/ScrollFloat";
 import AnimatedContent from "./AnimatedContent/AnimatedContent";
 
