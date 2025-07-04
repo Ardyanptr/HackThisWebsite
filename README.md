@@ -12,7 +12,7 @@
 ---
 
 ## 🌐 Live Demo
-**👉 [Hack This Website](https://hack-this-website.vercel.app/v?=1.0)**  
+**👉 [Hack This Website](https://hack-this-website.vercel.app/?v=1.0)**  
 Ready to test? Visit the live site and try to *"hack"* your way in... if you dare 👀
 
 ---
