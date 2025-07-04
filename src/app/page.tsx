@@ -149,15 +149,15 @@ export default function Home() {
             distance={150}
             direction="vertical"
             reverse={false}
-            duration={1.0}
+            duration={0.5}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity
-            scale={1.1}
+            scale={0}
             threshold={0.2}
             delay={0}
           >
-            <div className="w-full max-w-md max-h-[96vh] bg-gray-100/10 border-[2px] border-gray-500/30 rounded-md p-2 shadow-md shadow-black/50 text-white overflow-y-auto">
+            <div className="w-full max-w-md max-h-[96vh] bg-gray-800/50 border-[2px] border-gray-500/30 rounded-md p-2 shadow-md shadow-black/50 text-white overflow-y-auto">
               <h1 className="flex font-semibold mb-2" style={{ fontFamily: "'Poppins', monospace"}}>What's Real-Time?</h1>
               <p className="text-sm leading-relaxed text-white" style={{ fontFamily: "'Poppins', monospace"}}>
                 Imagine you're chatting with a friend, and their reply pops up instantly—without you refreshing the page or clicking anything. That’s called <span className="font-semibold text-blue-400">real-time</span>.
@@ -238,7 +238,7 @@ export default function Home() {
 
         <div className="w-full flex justify-center">
           <div className="flex justify-center items-center mt-10 text-center bg-green-500/30 border-[2px] border-green-600 w-[200px] h-[50px] font-semibold text-[20px] rounded-xl hover:scale-[1.1] hover:rotate-2 active:scale-[1.1] active:rotate-2 transition-all duration-250">
-            <a href="#" className="flex items-center justify-center" style={{ fontFamily: "'Poppins', monospace"}}>
+            <a href="learn" className="flex items-center justify-center" style={{ fontFamily: "'Poppins', monospace"}}>
               Let's Learn
             </a>
           </div>
@@ -251,11 +251,11 @@ export default function Home() {
         </div>
       </section>
  
-      <div className="flex flex-col mt-10 w-full bg-gray-800 justify-center items-center text-center">
+      <div className="flex flex-col mt-10 w-full bg-gray-800/20 justify-center items-center text-center">
         <h1 className="flex font-semibold mt-5" style={{ fontFamily: "'Poppins', monospace"}}>OELabs - HackThisWeb © 2025-2026</h1>
         <h1 className="flex font-semibold mt-5 max-w-75" style={{ fontFamily: "'Poppins', monospace"}}>Originated and Created by Ardyan Ardasyah right in Indonesia</h1>
 
-        <p className="mt-5 px-5 font-mono">This website are protected under MIT License as included on LICENSE in GitHub. Thank You!</p>
+        <p className="mt-5 px-5 font-mono">This website are protected under <strong>MIT License</strong> as included on LICENSE in GitHub. Thank You!</p>
 
         <div className="h-5"/>
       </div>
