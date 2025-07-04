@@ -1,4 +1,4 @@
-<h1 align="center">💻 HackTheWeb (HTW) 🔐</h1>
+<h1 align="center">💻 HackThisWebsite (HTW) 🔐</h1>
 <p align="center">
   <i>Educational Web Hacking Simulator — Learn how attackers think, so you can defend better.</i>
 </p>
@@ -12,7 +12,7 @@
 ---
 
 ## 🌐 Live Demo
-**👉 [Hack This Website](https://hack-this-website.vercel.app/)**  
+**👉 [Hack This Website](https://hack-this-website.vercel.app/v?=1.0)**  
 Ready to test? Visit the live site and try to *"hack"* your way in... if you dare 👀
 
 ---
