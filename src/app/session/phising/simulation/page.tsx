@@ -85,6 +85,7 @@ export default function Home() {
 
                         <button
                             type="submit"
+                            onClick={() => setShowHacked(true)}
                             className="bg-gradient-to-r from-red-600 to-red-400 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-md transition-all duration-300"
                         >
                             <a href="#" onClick={() => setShowHacked(true)}>
