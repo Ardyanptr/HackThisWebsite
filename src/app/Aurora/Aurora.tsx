@@ -1,3 +1,7 @@
+/*
+	Installed from https://reactbits.dev/ts/tailwind/
+*/
+
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 
@@ -156,7 +160,7 @@ export default function Aurora(props: AuroraProps) {
 
     const geometry = new Triangle(gl);
     if (geometry.attributes.uv) {
-      delete geometry.attributes.uv;
+      delete (geometry.attributes).uv;
     }
 
     const colorStopsArray = colorStops.map((hex) => {

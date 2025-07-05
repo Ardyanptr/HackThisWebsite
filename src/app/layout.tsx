@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CivicAuthProvider } from "@civic/auth/react";
 import "./globals.css";
+import { ChildProcess } from "child_process";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-poppins antialiased`}
       >
-        {children}
+        <CivicAuthProvider clientId="d6db0fa4-e647-4714-a95c-9c33a148c867">
+          {children}
+        </CivicAuthProvider>
         <SpeedInsights/>
       </body>
     </html>

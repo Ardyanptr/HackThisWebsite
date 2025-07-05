@@ -17,6 +17,8 @@ import BlurText from "./BlurText/BlurText";
 import FadeContent from "./FadeContent/FadeContent";
 import AnimatedContent from "./AnimatedContent/AnimatedContent";
 
+import { TitleBar } from "./TitleBar";
+
 import './globals.css'
 
 export default function Home() {
@@ -249,6 +251,8 @@ export default function Home() {
             <strong>It's all free! I promise!</strong>
           </p>
         </div>
+
+        <TitleBar />
       </section>
  
       <div className="flex flex-col mt-10 w-full bg-gray-800/20 justify-center items-center text-center">
