@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Head from "next/head";
 
-import { motion } from "framer-motion"
+import { motion, velocityPerSecond } from "framer-motion"
 import { useEffect } from "react";
 import { useState } from "react";
+import { useRef } from 'react';
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -16,7 +17,11 @@ import SplitText from "./SplitText/SplitText";
 import BlurText from "./BlurText/BlurText";
 import FadeContent from "./FadeContent/FadeContent";
 import AnimatedContent from "./AnimatedContent/AnimatedContent";
+import ScrollVelocity from "./ScrollVelocity/ScrollVelocity";
+import DecryptedText from "./DecryptedText/DecryptedText";
+import ProfileCard from "./ProfileCard/ProfileCard";
 
+import { useUser } from "@civic/auth/react";
 import { TitleBar } from "./TitleBar";
 
 import './globals.css'
@@ -62,12 +67,12 @@ export default function Home() {
         <div className="flex justify-center space-x-15 mt-0 h-15 items-center">
           <a href="rules" className="font-semibold opacity-80 active:text-2xl active:text-blue-50 active:opacity-100 hover:text-2xl hover:text-blue-50 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ fontFamily: "'Poppins', monoscpace" }}>Rules</a>
           <a href="#get-started" className="font-semibold opacity-80 active:text-2xl active:text-blue-50 active:opacity-100 hover:text-2xl hover:text-blue-50 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ fontFamily: "'Poppins', monoscpace" }}>Get Started</a>
-          <a href="#about-us" className="font-semibold opacity-80 active:text-2xl active:text-blue-50 active:opacity-100 hover:text-2xl hover:text-blue-50 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ fontFamily: "'Poppins', monoscpace" }}>About</a>
+          <a href="/profile" className="font-semibold opacity-80 active:text-2xl active:text-blue-50 active:opacity-100 hover:text-2xl hover:text-blue-50 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ fontFamily: "'Poppins', monoscpace" }}>Profile</a>
         </div>
       </div>
 
       <div className="flex flex-col items-center mt-30 text-wrap" style={{fontFamily: "'Poppins', monospace"}}>
-        <ShinyText text="HackThisWebsite" disabled={false} speed={2} className="text-3xl lg:text-6xl sm:text-5xl font-bold tracking-wide" />
+        <ShinyText text="HackThisWebsite" disabled={false} speed={3} className="text-3xl lg:text-6xl sm:text-5xl font-bold tracking-wide" />
       
         <SplitText
           text="A cyber arena where hackers worldwide push their limits and break through boundaries."
@@ -186,6 +191,13 @@ export default function Home() {
         </div>
       )}
 
+      <div className="flex items-center justify-center w-full">
+        <ScrollVelocity
+          texts={['Free', 'For', 'Everyone']}
+          className="text-md flex justify-center items-center text-center w-full"
+        />
+      </div>
+
       <div className="sm:h-[200px] h-[100px]"></div>
 
       <h1 data-aos="zoom-in" className="flex text-center items-center justify-center text-1xl sm:text-3xl mr-2 ml-2 font-semibold" style={{ fontFamily: "'Poppins', monospace"}}>This website is specifically targeted at beginner hackers who want to try hacking websites legally and safely.</h1>
@@ -200,11 +212,16 @@ export default function Home() {
         </div>
 
         <div className="flex items-center justify-center text-center mt-5" style={{ fontFamily: "'Poppins', monospace"}}>
-          <p className="max-w-[1760px] mt-2 ml-2">
-            Hi there! My name is Ardyan, and I built this website all by myself — right from Indonesia!<br/><br/>
-            HackThisWeb is made to help anyone <strong>(yes, even kids!)</strong> understand how to <strong>stay safe</strong> online.<br/><br/>
-            You’ll find fun little simulations that teach you what hackers might do — and how to protect yourself.
-          </p>
+          <DecryptedText
+            text="Hi there! My name is Ardyan, and I built this website all by myself — right from Indonesia!
+            HackThisWeb is made to help anyone (yes, even kids!) understand how to stay safe online.
+            You’ll find fun little simulations that teach you what hackers might do — and how to protect yourself."
+            animateOn="view"
+            revealDirection="start"
+            speed={250}
+            maxIterations={20}
+            className="revealed"
+          />
         </div>
       </section>
 
@@ -254,7 +271,29 @@ export default function Home() {
 
         <TitleBar />
       </section>
- 
+
+      <div className="mb-20 mt-20"/>
+
+      <div className="flex text-white items-center justify-center mt-15">
+        <div className="bg-blue-600 text-white text-center items-center w-30 h-6 rounded-4xl font-semibold text-[16px]" style={{ fontFamily: "'Poppins', monospace"}}>
+          About Me
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center mt-10">
+        <ProfileCard
+          name="Ardyan Ardasyah"
+          title="Fullstack Developer"
+          handle="ardyan_ardasyah"
+          status="Online"
+          contactText="Contact Me"
+          avatarUrl="aboutme.png"
+          showUserInfo={true}
+          enableTilt={true}
+          onContactClick={() => window.location.href = "https://instagram.com/ardyan_ardasyah"}
+        />
+      </div>
+
       <div className="flex flex-col mt-10 w-full bg-gray-800/20 justify-center items-center text-center">
         <h1 className="flex font-semibold mt-5" style={{ fontFamily: "'Poppins', monospace"}}>OELabs - HackThisWeb © 2025-2026</h1>
         <h1 className="flex font-semibold mt-5 max-w-75" style={{ fontFamily: "'Poppins', monospace"}}>Originated and Created by Ardyan Ardasyah right in Indonesia</h1>
